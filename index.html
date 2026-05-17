@@ -38,18 +38,37 @@
       padding: 32px 20px 56px;
     }
 
-    /* HEADER WITH LOGO */
+    /* HEADER WITH LOGO + COMPANY NAME */
     .header {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      gap: 18px;
       margin-bottom: 24px;
     }
 
     .header-logo {
-      height: 48px;
+      height: 180px;
       width: auto;
       display: block;
+    }
+
+    @media (max-width: 600px) {
+      .header-logo {
+        height: 120px;
+      }
+    }
+
+    .header-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header-title {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: var(--wine-dark);
+      text-transform: uppercase;
     }
 
     .header-tagline {
@@ -57,6 +76,7 @@
       text-transform: uppercase;
       letter-spacing: 0.16em;
       color: var(--text-muted);
+      margin-top: 4px;
     }
 
     /* HERO */
@@ -466,10 +486,14 @@
 <body>
   <div class="page">
 
-    <!-- HEADER WITH LOGO -->
+    <!-- HEADER WITH LOGO + COMPANY NAME -->
     <header class="header">
       <img src="logo.png" alt="Grace Pure Logo" class="header-logo">
-      <div class="header-tagline">Premium Tissue • Wholesale Supply • UK</div>
+
+      <div class="header-text">
+        <div class="header-title">GRACE PURE LIMITED</div>
+        <div class="header-tagline">Premium Tissue • Wholesale Supply • UK</div>
+      </div>
     </header>
 
     <!-- HERO -->
@@ -549,25 +573,3 @@
           </p>
 
           <div class="product-meta">
-            <span>Soft, skin‑friendly feel</span>
-            <span>Elegant box presentation</span>
-            <span>Suitable for brand labelling</span>
-          </div>
-
-          <p class="product-note">
-            Recommended for pharmacies, clinics, salons, hotels and premium retail partners.
-          </p>
-        </article>
-
-        <!-- Soft Pack Tissue -->
-        <article class="product-card">
-          <div class="product-tag">Value Line</div>
-          <h3 class="product-name">Soft Pack Tissue</h3>
-          <div class="product-line"></div>
-
-          <p class="product-desc">
-            Flexible soft‑pack tissue for everyday, high‑turnover use, balancing comfort and cost for value‑driven customers.
-          </p>
-
-          <div class="product-meta">
-            <span>Compact & lightweight</span
