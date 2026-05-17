@@ -71,6 +71,7 @@
       overflow: hidden;
       box-shadow: var(--shadow-soft);
       margin-bottom: 32px;
+      text-align: center;
     }
 
     .hero::before {
@@ -82,16 +83,24 @@
       pointer-events: none;
     }
 
+    .hero-logo {
+      width: 150px;
+      margin: 0 auto 22px auto;
+      display: block;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.25));
+    }
+
     .hero-inner {
       position: relative;
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
       gap: 28px;
       align-items: center;
+      text-align: left;
     }
 
     @media (max-width: 800px) {
-      .hero-inner { grid-template-columns: 1fr; }
+      .hero-inner { grid-template-columns: 1fr; text-align: center; }
     }
 
     .hero-label {
@@ -142,6 +151,10 @@
       flex-wrap: wrap;
       gap: 10px;
       align-items: center;
+    }
+
+    @media (max-width: 800px) {
+      .hero-actions { justify-content: center; }
     }
 
     .btn-primary {
@@ -472,6 +485,10 @@
 
     <!-- HERO -->
     <section class="hero">
+
+      <!-- ⭐ LOGO 插入位置 ⭐ -->
+      <img src="logo.png" alt="Grace Pure Logo" class="hero-logo">
+
       <div class="hero-inner">
 
         <div>
@@ -557,21 +574,4 @@
           </p>
         </article>
 
-        <!-- Soft Pack Tissue -->
-        <article class="product-card">
-          <div class="product-tag">Value Line</div>
-          <h3 class="product-name">Soft Pack Tissue</h3>
-          <div class="product-line"></div>
-
-          <p class="product-desc">
-            Flexible soft‑pack tissue for everyday, high‑turnover use, balancing comfort and cost for value‑driven customers.
-          </p>
-
-          <div class="product-meta">
-            <span>Compact & lightweight</span>
-            <span>Ideal for bulk orders</span>
-            <span>Practical for logistics</span>
-          </div>
-
-          <p class="product-note">
-            Recommended for
+       
